@@ -27,7 +27,7 @@
 {% endif %}
 
 <form action="{{ app_path }}" method="post" id="login-form">{% csrf_token %}
-  <div class="form-row">
+  <div class="form-row n">
     {{ form.username.errors }}
     <label class="required" for="id_username">
       {% trans 'Email, phone number or username' %}:
