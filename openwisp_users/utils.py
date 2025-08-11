@@ -8,6 +8,7 @@ else:
 
 class BaseAdmin(BaseModelAdmin):
     history_latest_first = True
+    list_per_page = 10
 
 
 def usermodel_add_form(model, additional_fields):

@@ -5,5 +5,7 @@ django-phonenumber-field~=8.1.0
 phonenumbers~=9.0.6
 # openwisp-utils[rest,celery] @ https://github.com/sachinspanidea8484/openwisp-utils-spanidea/tarball/main
 openwisp-utils[rest,celery] @ git+https://sachin:kkVgLq7Uyd5vgKzTkDEf@git.spanidea.com/nokia-test-automation/openwisp-utils-spanidea.git@dev
+# openwisp-utils[rest,celery] @ file:///home/spanidea-lt22/Desktop/NOKIA/communications/openwisp-utils
+
 packaging
 django-sesame~=3.2.3

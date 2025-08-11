@@ -1,5 +1,7 @@
 # openwisp-utils[qa,selenium] @ https://github.com/sachinspanidea8484/openwisp-utils-spanidea/tarball/main
-openwisp-utils[qa,selenium] @ git+https://sachin:kkVgLq7Uyd5vgKzTkDEf@git.spanidea.com/nokia-test-automation/openwisp-utils-spanidea.git@dev
+openwisp-utils[qa,selenium] @ git+https://sachin:kkVgLq7Uyd5vgKzTkDEf@git.spanidea.com/nokia-test-automation/openwisp-utils-spanidea.git@dev 
+# openwisp-utils[qa,selenium] @ file:///home/spanidea-lt22/Desktop/NOKIA/communications/openwisp-utils
+
 django-redis~=5.4.0
 django-reversion~=5.1.0
 
