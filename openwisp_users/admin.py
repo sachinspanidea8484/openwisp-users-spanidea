@@ -14,6 +14,7 @@ from django.contrib.auth.admin import GroupAdmin as BaseGroupAdmin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.forms import UserChangeForm as BaseUserChangeForm
 from django.contrib.auth.forms import UserCreationForm as BaseUserCreationForm
+from django.contrib.auth.models import Permission
 from django.core.exceptions import ValidationError
 from django.forms.models import BaseInlineFormSet
 from django.http import HttpResponseRedirect
@@ -210,6 +211,15 @@ class UserAdmin(MultitenantAdminMixin, BaseUserAdmin, BaseAdmin):
     # To ensure extended apps use this template.
     change_form_template = "admin/openwisp_users/user/change_form.html"
 
+    def formfield_for_manytomany(self, db_field, request, **kwargs):
+            if db_field.name == "user_permissions":
+                # Only show permissions for models in selected apps
+                allowed_apps = ["test_management"]
+                kwargs["queryset"] = Permission.objects.filter(
+                    content_type__app_label__in=allowed_apps
+                )
+            return super().formfield_for_manytomany(db_field, request, **kwargs)
+    
     def require_confirmation(func):
         """
         Decorator to lead to a confirmation page.
