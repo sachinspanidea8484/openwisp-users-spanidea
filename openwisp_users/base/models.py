@@ -16,7 +16,7 @@ from swapper import load_model
 
 from .. import settings as app_settings
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger(__name__) 
 
 
 class UserManager(BaseUserManager):
